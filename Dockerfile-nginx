@@ -1,0 +1,4 @@
+FROM nginx:1.23.1
+RUN apt update && apt -y install certbot python3-certbot-nginx
+CMD ["nginx", "-g", "daemon off;"]
+ENTRYPOINT ["/docker-entrypoint.sh"]
